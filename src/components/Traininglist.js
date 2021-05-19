@@ -19,7 +19,7 @@ function Traininglist() {
     }
 
     const deleteTraining = (oldData) => {
-        fetch(oldData.links[0].href, {
+        fetch("https://customerrest.herokuapp.com/api/trainings/"+oldData.id, {
             method: 'DELETE',
             body: JSON.stringify(oldData),
             headers: { 'Content-type' : 'application/json'}
